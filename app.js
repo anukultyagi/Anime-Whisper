@@ -25,7 +25,7 @@ function useQuote() {
     loading();
     //check quote length for styling.
     if (currentQuote.quote.length > 100) {
-        console.log("too long")
+        // console.log("too long")
         quoteText.classList.add('text-2xl');
         quoteText.classList.remove('text-4xl')
     } else {
@@ -46,7 +46,7 @@ async function getQuotes() {
     try {
         const response = await fetch(apiUrl);
         currentQuote = await response.json();
-        console.log(currentQuote)
+        // console.log(currentQuote)
         useQuote();
     }
 
