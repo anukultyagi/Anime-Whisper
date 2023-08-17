@@ -1,0 +1,28 @@
+{
+  "name": "anime-whisper",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000A\u0000n\u0000i\u0000m\u0000e\u0000-\u0000W\u0000h\u0000i\u0000s\u0000p\u0000e\u0000r\u0000\r\u0000 \u0000",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anukultyagi/Anime-Whisper.git"
+  },
+  "author": "Anukul Tyagi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anukultyagi/Anime-Whisper/issues"
+  },
+  "homepage": "https://github.com/anukultyagi/Anime-Whisper#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "vite": "^4.4.9"
+  }
+}
