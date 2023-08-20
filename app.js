@@ -1,6 +1,7 @@
 // Get quotes from API
 const authorName = document.getElementById('authorName');
 const quoteText = document.getElementById('quoteText');
+const animeName = document.getElementById('animeName');
 const quoteContainer = document.getElementById('quote-container');
 const newQuoteBtn = document.getElementById('nextBtn');
 const twitterBtn = document.getElementById('twitterBtn');
@@ -27,15 +28,23 @@ function useQuote() {
     if (currentQuote.quote.length > 100) {
         // console.log("too long")
         quoteText.classList.add('text-2xl');
-        quoteText.classList.remove('text-4xl')
+        quoteText.classList.remove('text-4xl');
+        getQuotes();
+
+    }
+    else if (currentQuote.quote.length > 300) {
+
+        getQuotes();
+
     } else {
         quoteText.classList.add('text-4xl');
         quoteText.classList.remove('text-2xl')
     }
 
-    //show quote and author name.
+    //show  anime name, quote and author name.
     authorName.innerHTML = currentQuote.character;
     quoteText.innerHTML = currentQuote.quote;
+    animeName.innerHTML = currentQuote.anime;
     Complete();
 
 }
@@ -45,8 +54,11 @@ async function getQuotes() {
     const apiUrl = "https://animechan.xyz/api/random";
     try {
         const response = await fetch(apiUrl);
+        if (!response.okj) {
+            return alert('Sorry for the trouble, Please try again later.');
+        }
         currentQuote = await response.json();
-        // console.log(currentQuote)
+        console.log(currentQuote)
         useQuote();
     }
 
