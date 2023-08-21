@@ -29,10 +29,10 @@ function useQuote() {
         // console.log("too long")
         quoteText.classList.add('text-2xl');
         quoteText.classList.remove('text-4xl');
-        getQuotes();
+       // getQuotes();
 
     }
-    else if (currentQuote.quote.length > 300) {
+    else if (currentQuote.quote.length > 400) {
 
         getQuotes();
 
@@ -58,7 +58,7 @@ async function getQuotes() {
             return alert('Sorry for the trouble, Please try again later.');
         }
         currentQuote = await response.json();
-        console.log(currentQuote)
+       // console.log(currentQuote)
         useQuote();
     }
 
