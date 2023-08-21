@@ -54,7 +54,7 @@ async function getQuotes() {
     const apiUrl = "https://animechan.xyz/api/random";
     try {
         const response = await fetch(apiUrl);
-        if (!response.okj) {
+        if (!response.ok) {
             return alert('Sorry for the trouble, Please try again later.');
         }
         currentQuote = await response.json();
