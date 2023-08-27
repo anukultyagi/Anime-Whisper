@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // Get quotes from API
 const authorName = document.getElementById('authorName');
 const quoteText = document.getElementById('quoteText');
@@ -25,14 +27,14 @@ function Complete() {
 function useQuote() {
     loading();
     //check quote length for styling.
-    if (currentQuote.quote.length > 100) {
+    if (currentQuote.apiResult[0].english.length > 100) {
         // console.log("too long")
         quoteText.classList.add('text-2xl');
         quoteText.classList.remove('text-4xl');
         // getQuotes();
 
     }
-    else if (currentQuote.quote.length > 400) {
+    else if (currentQuote.apiResult[0].english.length > 400) {
 
         getQuotes();
 
@@ -42,30 +44,26 @@ function useQuote() {
     }
 
     //show  anime name, quote and author name.
-    authorName.innerHTML = currentQuote.character;
-    quoteText.innerHTML = currentQuote.quote;
-    animeName.innerHTML = currentQuote.anime;
+    authorName.innerHTML = currentQuote.apiResult[0].character;
+    quoteText.innerHTML = currentQuote.apiResult[0].english;
+    animeName.innerHTML = currentQuote.apiResult[0].anime;
     Complete();
 
 }
 
 async function getQuotes() {
     loading();
-    const apiUrl = "https://animechan.xyz/api/random";
+    // const apiUrl = "https://animechan.xyz/api/random";
+    const apiUrl = "https://kyoko.rei.my.id/api/quotes.php";
     try {
-        const response = await fetch(apiUrl, {
-            method: 'GET',
-            withCredentials: true,
-            crossorigin: true,
-            // mode: 'no-cors',
-        });
+        const response = await fetch(apiUrl);
 
         if (!response.ok) {
             return alert('Sorry for the trouble, Please try again later.');
         }
 
         currentQuote = await response.json();
-        // console.log(currentQuote)
+        // console.log(currentQuote.apiResult[0].english)
         useQuote();
     }
 
