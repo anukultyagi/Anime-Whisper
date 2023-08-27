@@ -53,12 +53,19 @@ async function getQuotes() {
     loading();
     const apiUrl = "https://animechan.xyz/api/random";
     try {
-        const response = await fetch(apiUrl);
-        if (!response.okj) {
+        const response = await fetch(apiUrl, {
+            method: 'GET',
+            withCredentials: true,
+            crossorigin: true,
+            // mode: 'no-cors',
+        });
+
+        if (!response.ok) {
             return alert('Sorry for the trouble, Please try again later.');
         }
+
         currentQuote = await response.json();
-        console.log(currentQuote)
+        // console.log(currentQuote)
         useQuote();
     }
 
