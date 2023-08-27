@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 
 // Get quotes from API
 const authorName = document.getElementById('authorName');
