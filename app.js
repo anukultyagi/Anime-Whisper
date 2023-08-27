@@ -29,7 +29,7 @@ function useQuote() {
         // console.log("too long")
         quoteText.classList.add('text-2xl');
         quoteText.classList.remove('text-4xl');
-        getQuotes();
+        // getQuotes();
 
     }
     else if (currentQuote.quote.length > 400) {
@@ -53,18 +53,12 @@ async function getQuotes() {
     loading();
     const apiUrl = "https://animechan.xyz/api/random";
     try {
-        const response = await fetch(apiUrl, {
-            method: 'GET',
-            withCredentials: true,
-            crossorigin: true,
-            mode: 'no-cors',
-        });
-
+        const response = await fetch(apiUrl);
         if (!response.okj) {
             return alert('Sorry for the trouble, Please try again later.');
         }
         currentQuote = await response.json();
-        // console.log(currentQuote)
+        console.log(currentQuote)
         useQuote();
     }
 
