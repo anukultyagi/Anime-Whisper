@@ -56,7 +56,14 @@ async function getQuotes() {
     // const apiUrl = "https://animechan.xyz/api/random";
     const apiUrl = "https://kyoko.rei.my.id/api/quotes.php";
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(apiUrl, {
+
+            method: 'GET',
+            withCredentials: true,
+            crossorigin: true,
+            // mode: 'no-cors',
+
+        });
 
         if (!response.ok) {
             return alert('Sorry for the trouble, Please try again later.');
@@ -110,3 +117,11 @@ getQuotes();
 // Anime
 // character
 // quote
+
+// try {
+//     const response = await fetch(apiUrl,{
+//         method: 'GET',
+//         withCredentials: true,
+//         crossorigin: true,
+//         mode: 'no-cors',
+//       });
