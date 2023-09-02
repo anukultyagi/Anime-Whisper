@@ -62,6 +62,7 @@ async function getQuotes() {
             withCredentials: true,
             crossorigin: true,
             // mode: 'no-cors',
+            'Access-Control-Allow-Origin': '*',
 
         });
 
