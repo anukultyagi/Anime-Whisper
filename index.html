@@ -1,114 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon-16x16.png"
-    />
-
-    <title>Anime Whisper</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./main.css" />
+    <title>Vite + React</title>
   </head>
-
-  <body class="h-screen">
-    <div class="page-title p-3 text-center">
-      <p
-        class="text-lg font-extrabold tracking-wider md:font-extrabold md:text-4xl"
-      >
-        AnimeWhisper
-      </p>
-      <p class="italic mt-2 text-sm md:text-base">
-        -- Some Wisdom from the Anime Universe
-      </p>
-    </div>
-    <div
-      id="quote-container"
-      class="main-container border border-black mx-3 p-2 md:w-2/3 md:mx-auto md:mt-10"
-    >
-      <div class="top-container px-3 flex justify-between">
-        <div class="quote-icon text-white text-4xl md:text-5xl">
-          <i class="fa-solid fa-quote-left"></i>
-        </div>
-        <div class="action-center flex gap-5 items-baseline">
-          <button
-            class="text-lg md:text-xl text-slate-700 hover:-translate-y-1"
-            id="copy"
-            title="Copy"
-          >
-            <i class="fa-solid fa-copy"></i>
-          </button>
-          <button
-            class="text-lg md:text-xl text-slate-700 hover:-translate-y-1"
-            id="speak"
-            title="listen"
-          >
-            <i class="fa-solid fa-volume-high"></i>
-          </button>
-          <button
-            id="twitterBtn"
-            class="text-lg md:text-xl text-slate-700 hover:-translate-y-1"
-            title="Tweet This"
-          >
-            <i class="fa-brands fa-twitter"></i>
-          </button>
-        </div>
-      </div>
-      <div class="quote-text my-5 px-3">
-        <p id="quoteText" class="md:font-semibold font-medium"></p>
-      </div>
-      <div class="bottom-container px-3 flex justify-between items-center">
-        <div class="author">
-          <p class="text-white">
-            --
-            <span id="authorName" class="italic"></span>
-            <span class="hidden md:block">|</span>
-            <span
-              id="animeName"
-              class="italic font-light block md:inline"
-            ></span>
-          </p>
-        </div>
-        <div class="next">
-          <button
-            id="nextBtn"
-            class="next-btn border border-black rounded px-5 py-1 hover:bg-black hover:text-white active:scale-110"
-            title="Check Next"
-          >
-            Next
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- loader  -->
-    <div
-      class="loader border-8 absolute top-1/3 left-1/3 border-white border-t-black rounded-full w-28 h-28 animate-spin"
-      id="loader"
-    ></div>
-
-    <script type="module" src="./app.js"></script>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
