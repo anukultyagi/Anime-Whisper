@@ -12,6 +12,10 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    fontFamily: {
+      'headingFont': ['Irish Grover', 'serif']
+    }
   },
   plugins: [],
+  darkMode: "selector"
 };
