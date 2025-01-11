@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-200 fixed w-full bottom-0 dark:bg-gray-900 text-center py-4">
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+        <footer className="fixed w-full bottom-0 text-center py-4">
+            <p className="text-sm text-stone-500  mix-blend-difference">
                 Built with ❤️ using React & Anime Whisper API
             </p>
         </footer>

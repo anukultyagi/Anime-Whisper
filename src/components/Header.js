@@ -19,10 +19,10 @@ const Header = () => {
     return (
         <header className="p-4">
             <div className="max-w-6xl mx-auto text-center">
-                <h1 className="text-5xl font-headingFont font-bold dark:text-gray-50">
+                <h1 className="text-5xl font-headingFont font-bold text-stone-50 mix-blend-difference ">
                     Anime Whisper
                 </h1>
-                <p className="text-lg font-headingFont mt-3 text-gray-600 dark:text-gray-100">
+                <p className="text-lg font-headingFont mt-3 tracking-widest text-white mix-blend-difference">
                     Unleash the Wisdom of Anime Quotes
                 </p>
                 <button className={`absolute right-16 top-10 text-2xl `} onClick={toggleDarkMode}>{darkMode ?
