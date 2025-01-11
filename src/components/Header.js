@@ -19,7 +19,7 @@ const Header = () => {
     return (
         <header className="p-4">
             <div className="max-w-6xl mx-auto text-center">
-                <h1 className="text-5xl font-headingFont font-bold text-stone-50 mix-blend-difference ">
+                <h1 className="text-5xl tracking-widest font-headingFont font-bold text-stone-50 mix-blend-difference ">
                     Anime Whisper
                 </h1>
                 <p className="text-lg font-headingFont mt-3 tracking-widest text-white mix-blend-difference">

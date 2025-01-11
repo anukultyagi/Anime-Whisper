@@ -8,7 +8,7 @@ const QuoteSection = () => {
         const response = await fetch("https://anime-whisper-api.netlify.app/api/random")
         const result = await response.json();
         setApiData(result)
-        console.log(result)
+
     }
 
     useEffect(() => {
@@ -32,7 +32,7 @@ const QuoteSection = () => {
     }
 
     return (
-        <section className="max-w-5xl min-h-80  flex flex-col justify-between mx-auto bg-gradient-to-r from-stone-900 dark:from-stone-100 from-50% to-stone-100 dark:to-stone-900 to-50%">
+        <section className="max-w-5xl min-h-80  flex flex-col justify-between mx-auto">
             <div className="m-5 flex justify-between items-start ">
                 <div className="text-6xl text-stone-100 mix-blend-difference">
                     <svg
