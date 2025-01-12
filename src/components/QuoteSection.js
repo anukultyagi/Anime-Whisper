@@ -1,15 +1,30 @@
 "use client"
 import { useEffect, useState } from "react";
+import Loader from "./Loader";
 
 const QuoteSection = () => {
-    const [apiData, setApiData] = useState([])
+    const [apiData, setApiData] = useState([{
+        character: "Saori Shibuki",
+        show: "Imawa no Kuni no Alice",
+        quote: "With death staring you in the face, you truly understand what it means to be alive"
+    }])
+    const [loader, setLoader] = useState(false)
 
     const fetchApi = async () => {
-        const response = await fetch("https://anime-whisper-api.netlify.app/api/random")
-        const result = await response.json();
-        setApiData(result)
-
-    }
+        try {
+            setLoader(true); // Show the loader
+            const response = await fetch('https://anime-whisper-api.netlify.app/api/random');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const result = await response.json();
+            setApiData(result); // Set the fetched data to the state
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        } finally {
+            setLoader(false); // Hide the loader
+        }
+    };
 
     useEffect(() => {
         fetchApi()
@@ -95,8 +110,9 @@ const QuoteSection = () => {
             </div>
             <div className="m-5 flex justify-between items-center">
                 <p className="font-semibold italic tracking-wider text-white mix-blend-difference">- {apiData && apiData.character} | {apiData && apiData.show}</p>
-                <button onClick={refreshHandler} className="transition ease-in-out delay-50 px-4 py-1 rounded text-white mix-blend-difference border hover:bg-white hover:text-black font-medium">Refresh</button>
+                <button onClick={refreshHandler} className="transition z-50 ease-in-out delay-50 px-4 py-1 rounded text-white mix-blend-difference border hover:bg-white hover:text-black font-medium">Refresh</button>
             </div>
+            <Loader status={loader} />
         </section>
     );
 };

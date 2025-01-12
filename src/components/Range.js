@@ -8,7 +8,7 @@ export default function Range(props) {
     };
 
     return (
-        <div className="absolute rotate-90 top-1/2 right-5">
+        <div className="absolute rotate-90 top-1/2 right-4">
             <input
                 type="range"
                 min="4"
