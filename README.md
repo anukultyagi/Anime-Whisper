@@ -1,20 +1,19 @@
 # Anime Whisper
 
-Anime Whisper is a modern and responsive web application that allows users to explore, search, and discover anime. Powered by a custom API, the app delivers a seamless and engaging user experience for anime enthusiasts.
+Anime Whisper is a delightful app that generates random anime quotes to inspire, entertain, and connect anime lovers with memorable lines from their favorite characters.
 
 ## Features
 
-- 🔍 **Search Anime**: Quickly find your favorite anime titles.
-- 🌟 **Explore Anime**: View popular and trending anime recommendations.
-- 🛠️ **Custom API Integration**: Fetch real-time anime data from a tailor-made API.
+- 🔍 **Random Anime Quotes**: Generate a new anime quote at the click of a button.
+- 🌟 **Dynamic Display**: Every interaction provides a unique quote from popular anime series.
 - 📱 **Responsive Design**: Optimized for all screen sizes using Tailwind CSS.
-- ⚡ **Dynamic UI**: Built with React for an interactive and efficient user interface.
+- ⚡ **Elegant UI**: Designed with a clean and minimalist interface for a seamless user experience.
 
 ## Tech Stack
 
 - **Frontend**: React, Tailwind CSS
-- **Backend API**: Custom-built API for anime data
-- **Deployment**: Hosted on [Netlify](https://netlify.com) (or your preferred platform)
+- **Backend API**: Anime Quotes API: To fetch random anime quotes
+- **Deployment**: Hosted on [Netlify](https://netlify.com)
 
 ## Installation
 
@@ -23,7 +22,7 @@ Follow these steps to set up the project locally:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/anime-whisper.git
+   git clone https://github.com/anukultyagi/anime-whisper.git
    cd anime-whisper
    ```
 
@@ -46,22 +45,18 @@ Follow these steps to set up the project locally:
 
 ## API Usage
 
-Anime Whisper utilizes a custom API to fetch anime data. The API details are available in the `/api` folder. You can host it on platforms like Heroku, Render, or any backend hosting service.
+Anime Whisper utilizes a custom API to fetch anime data. The API details are available at "https://anime-whisper-api.netlify.app/". It is available for free with minimal limitations.
 
 ## Demo
 
-🎥 **Live Demo**: [Anime Whisper](https://your-live-demo-link.com)
-
-## Screenshots
-
-_Add screenshots here to showcase the application._
+🎥 **Live Demo**: [Anime Whisper](https://anime-whisper.netlify.app/)
 
 ## Future Improvements
 
-- Add user authentication for a personalized experience.
-- Implement advanced filters for genre, rating, and more.
-- Create a favorites or watchlist feature for users.
-- Improve animations and transitions for a smoother UI.
+- Add a search feature for quotes by character or anime.
+- Implement a "Favorite Quotes" feature for saving and viewing favorite lines.
+- Include additional filters like genre or series.
+- make a small video based on any generated quote.
 
 ## Contribution
 
